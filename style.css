@@ -11,10 +11,10 @@ body {
 }
 
 #content1 {
-    position: absolute;
+    position: fixed;
     top: 100%;
     left:100%;
-    transform: translate(-85%, -85%); 
+    transform: translate(-99%, -99%); 
     animation: fade 4s ease-in;
 }
 
