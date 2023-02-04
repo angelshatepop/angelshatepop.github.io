@@ -8,11 +8,12 @@ body {
   align-items: flex-start;
 }
 
-iframe {
+#content1 {
     position: absolute;
     top: 100%;
     left:100%;
     transform: translate(-85%, -85%); 
+    animation: fade 4s ease-in;
 }
 
 
@@ -20,6 +21,7 @@ iframe {
   text-align: center;
 }
 
+/* glitch code*/
 .glitch {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,6 +29,7 @@ iframe {
   font-weight: regular;
   font-family: system-ui;
   text-transform: lowercase;
+  pointer-events: none;
   position: relative;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
@@ -58,6 +61,8 @@ iframe {
   grid-row-start: 1;
   grid-column-start: 1;
   font-size: 4rem;
+  writing-mode: vertical-rl;
+  pointer-events: none;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
   --clip-top: calc(var(--stack-height) * var(--index));
@@ -69,36 +74,7 @@ iframe {
 .glitch span:nth-child(odd) { --glitch-translate: 8px; }
 .glitch span:nth-child(even) { --glitch-translate: -8px; }
 
-@keyframes stack {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-  };
-  60% {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-  80% {
-    transform: none;
-    opacity: 1;
-    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-  }
-  100% {
-    text-shadow: none;
-  }
-}
 
-@keyframes glitch {
-  0% {
-    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-    transform: translate(var(--glitch-translate));
-  }
-  2% {
-    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-  }
-  4%, 100% {  text-shadow: none; transform: none; }
-}
 @keyframes glitch {
   0% {
     text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
@@ -127,5 +103,14 @@ iframe {
   100% {
     text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
       -0.04em -0.025em 0 #fffc00;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
