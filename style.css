@@ -1,8 +1,8 @@
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background: black;
-  color: ghostwhite;
+  background: ghostwhite;
+  color: black;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -15,9 +15,13 @@ body {
     top: 100%;
     left:100%;
     transform: translate(-99%, -99%); 
-    animation: fade 4s ease-in;
+    animation: fade_in_plus 4s ease-in;
 }
 
+#content1:hover img{
+  transform-origin: center;
+  animation: scale_out_plus 2000ms ease-in-out forwards;
+}
 
 .container {
   text-align: center;
@@ -108,11 +112,20 @@ body {
   }
 }
 
-@keyframes fade {
+@keyframes fade_in_plus {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes scale_out_plus{
+  from{
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
   }
 }
