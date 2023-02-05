@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: start;
     align-items: flex-start;
+    text-align: center;
 }
 
 .container {
@@ -24,16 +25,16 @@ body {
     pointer-events: none;
 }
 
-#xxx {
-    position: fixed;
-    top: 65%
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    font-weight: bold;
-    font-style: italic;
-    animation: xxx 4s ease-in;
-    pointer-events: none;
-}
+#brighten {
+     position: fixed;
+     top: 60%;
+     left:50%;
+     transform: translate(-50%, -50%); 
+     font-weight: bold;
+     font-style: italic;
+     animation: bright 4s ease-in;
+     pointer-events: none;
+ }
 
 @keyframes fade{
     0%{
@@ -42,9 +43,9 @@ body {
     100%{
         opacity: 1;
     }
-}
+}  
 
-@keyframes xxx{
+@keyframes bright{
     0%{
         opacity: 0;
     }
