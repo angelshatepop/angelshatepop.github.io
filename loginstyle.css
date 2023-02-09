@@ -22,7 +22,6 @@ body {
     left:50%;
     transform: translate(-50%, -50%); 
     animation: fade 6s ease-in;
-    pointer-events: none;
 }
 
 #brighten {
