@@ -18,6 +18,7 @@ input[type=text]{
     border-color: ghostwhite;
 
     font-style: italic;
+    font-size: 14px;
     width: 150px;
     top:53%;
     left: 50%;
