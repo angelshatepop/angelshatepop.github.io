@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./loginstyle.css">
 </head>
 
-<body style="background-color: ghostwhite;">
+<body class="container">
   <div id="fade">
     <a href="./home.html">
       <img src="plus175speed.gif" height="200px" width="200px"/>
@@ -20,12 +20,20 @@
   <div id="brighten">
     <p style="color: dimgray;"> welcome to h3aven</p>
   </div>
-  <!--
-  <script>
-    var timer = setTimeout(function() {
-        window.location='./home.html'
-    }, 6000);
-  </script>
-  -->
+
+  <form>
+    <input type="text" id="key" name="key">
+    <input type="button" onclick="myFunction()" value="submit" maxlength="9">
+  </form>
 </body>
+
+<script>
+    function myFunction(){
+      var key = document.getElementById('key').value;
+      var key2 = 'key';
+      if (key == key2){
+        window.location='/Users/ethanwater/Documents/GitHub/angelshatepop.github.io/home.html';
+      }
+    }
+</script>
 

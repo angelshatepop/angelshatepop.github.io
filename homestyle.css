@@ -1,29 +1,9 @@
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background: ghostwhite;
-  color: black;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-}
-
-
-#menu ul{
-  list-style: none;
-}
-#menu li{
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: regular;
-  font-family: system-ui;
-  text-transform: lowercase;
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-    0.025em 0.04em 0 #fffc00;
+  background: black;
+  color: ghostwhite;
+  animation: fade 3s ease;
 }
 
 a:link {
@@ -46,12 +26,39 @@ a:active {
   color: #808080;
 }
 
+.homelink{
+  position: relative;
+  float: right;
+  font-size: 1rem;
+  font-weight: regular;
+  font-family: system-ui;
+  text-transform: lowercase;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+}
+.loginlink{
+  position: relative;
+  float: right;
+  font-size: 1rem;
+  font-weight: regular;
+  font-family: system-ui;
+  text-transform: lowercase;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+}
+.menubox{
+  top: -65px;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+
 #plus {
     position: fixed;
     top: 100%;
     left:100%;
     transform: translate(-99%, -99%); 
-    animation: fade_in_plus 4s ease-in-out forwards;
+    animation: fade 4s ease-in-out forwards;
 }
 
 #plus:hover img{
@@ -59,9 +66,6 @@ a:active {
   animation: scale_out_plus 2000ms ease-in-out forwards;
 }
 
-.container {
-  text-align: center;
-}
 
 /* glitch code*/
 .glitch {
@@ -103,7 +107,7 @@ a:active {
   grid-row-start: 1;
   grid-column-start: 1;
   font-size: 3rem;
-  writing-mode: vertical-rl;
+  /*writing-mode: vertical-rl;*/
   pointer-events: none;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
@@ -115,7 +119,6 @@ a:active {
 
 .glitch span:nth-child(odd) { --glitch-translate: 8px; }
 .glitch span:nth-child(even) { --glitch-translate: -8px; }
-
 
 @keyframes glitch {
   0% {
@@ -148,7 +151,7 @@ a:active {
   }
 }
 
-@keyframes fade_in_plus {
+@keyframes fade{
   from{
     opacity: 0;
   }
