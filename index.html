@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./loginstyle.css">
 </head>
 
-<body class="container">
+<body class="container" onload="setThemeTime()">
   <div id="fade">
     <img src="plus175speed.gif" height="175px" width="175px" onclick="myFunction()"/>
   </div>
@@ -39,6 +39,16 @@
     }
     event.preventDefault();
   }
-});
-</script>
+  });
 
+  function setThemeTime(){
+    var date = new Date();
+    var hour = date.getHours();
+    if(hour <= 17 && hour >= 5){
+      document.body.style.backgroundColor= "ghostwhite";
+      document.body.style.color="black";
+      input.style.color = "black";
+    }
+  }
+
+</script>
