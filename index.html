@@ -13,25 +13,32 @@
 
 <body class="container">
   <div id="fade">
-    <img src="plus175speed.gif" height="200px" width="200px"/>
+    <img src="plus175speed.gif" height="175px" width="175px" onclick="myFunction()"/>
   </div>
-  <div id="brighten">
-    <p style="color: dimgray;">welcome to h3aven</p>
-  </div>
-
-  <form>
-    <input type="text" id="key" name="key">
-    <input type="button" onclick="myFunction()" value="submit" maxlength="9">
-  </form>
+  <div id="brighten"><p style="color: dimgray;">welcome to h3aven</p></div>
+  <input type="text" id="key" name="key">
+  <div class="keyresult"><p style="color:ghostwhite;" id="keyresult"></p></div>
 </body>
 
 <script>
-    function myFunction(){
-      var key = document.getElementById('key').value;
-      var key2 = 'key';
-      if (key == key2){
-        window.location='./home.html';
-      }
+  var input = document.getElementById("key");
+  var keyresult = document.getElementById("keyresult");
+
+  input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    var key = document.getElementById('key').value;
+    var key2 = 'key';
+    if (key == key2){
+      window.location="./home.html";
+      keyresult.innerHTML = "";
+      input.value = "";
     }
+    else{
+      keyresult.innerHTML = "incorrect keyphrase";
+      keyresult.style.color = "#cf1020";
+    }
+    event.preventDefault();
+  }
+});
 </script>
 
