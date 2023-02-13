@@ -11,7 +11,7 @@ if (event.key === "Enter") {
     keyresult.innerHTML = "";
     input.value = "";
   }
-  if(key == secretkeygradient){
+  else if(key == secretkeygradient){
     if (document.getElementById("body").className == "gradientbg"){
       keyresult.innerHTML = "";
     }
@@ -20,6 +20,7 @@ if (event.key === "Enter") {
       document.getElementById("welcome").style.color = "black";
       keyresult.innerHTML = "secret: 'soup' toggled";
       keyresult.style.color = "ghostwhite";
+      window.sessionStorage.setItem('secret', 1);
     }
   }
   else{
