@@ -27,6 +27,7 @@ a:active {
 }
 
 .homelink{
+  color: ghostwhite;
   position: relative;
   float: right;
   font-size: 1rem;
@@ -37,6 +38,7 @@ a:active {
     0.025em 0.04em 0 #fffc00;
 }
 .loginlink{
+  color: ghostwhite;
   position: relative;
   float: right;
   font-size: 1rem;
