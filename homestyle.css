@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 100%;
+  height: 2000px;
   overflow-x: hidden;
   background: black;
   color: ghostwhite;
@@ -8,7 +13,7 @@ body {
 
 a:link {
   text-decoration: none;
-  color: black;
+  color: ghostwhite;
 }
 
 a:visited {
@@ -53,9 +58,8 @@ a:active {
     0.025em 0.04em 0 #fffc00;
 }
 .menubox{
-  top: -65px;
+  top: 20px;
   margin-right: 10px;
-  height: 50px;
   width: 50px;
 }
 
@@ -82,7 +86,7 @@ a:active {
   font-family: system-ui;
   text-transform: lowercase;
   pointer-events: none;
-  position: relative;
+  position: fixed;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
   animation: glitch 725ms infinite;
