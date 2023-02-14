@@ -20,6 +20,7 @@ if (event.key === "Enter") {
       document.getElementById("welcome").style.color = "black";
       keyresult.innerHTML = "secret: 'soup' toggled";
       keyresult.style.color = "ghostwhite";
+      input.value = "";
       window.sessionStorage.setItem('secret', 1);
     }
   }
