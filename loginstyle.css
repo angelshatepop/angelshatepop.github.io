@@ -26,7 +26,7 @@ input:focus {
     outline: none;
 }
 
-#fade {
+#fadePlus {
     position: absolute;
     top: 40%;
     left:50%;
@@ -45,12 +45,7 @@ input:focus {
     pointer-events: none;
 }
 
-.container {
-    place-items: center;
-    text-align: center;
-}
-
-.keyresult {
+#keyresult {
     position: absolute;
     top: 55%;
     left:50%;
@@ -59,6 +54,12 @@ input:focus {
     font-style: italic;
     pointer-events: none;
     animation: KeyphraseFade 8s ease-in;
+}
+
+
+.container {
+    place-items: center;
+    text-align: center;
 }
 
 .gradientbg {
