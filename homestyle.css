@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
   background: black;
   color: ghostwhite;
-  animation: fade 3s ease;
+  animation: Fade 3s ease;
 }
 
 a:link {
@@ -18,7 +18,7 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: ghostwhite;
 }
 
 a:hover {
@@ -29,6 +29,19 @@ a:hover {
 a:active {
   text-decoration: none;
   color: #808080;
+}
+
+#plus {
+  position: fixed;
+  top: 100%;
+  left:100%;
+  transform: translate(-99%, -99%); 
+  animation: Fade 4s ease-in-out forwards;
+}
+
+#plus:hover img{
+transform-origin: center;
+animation: ScaleOutPlus 2000ms ease-in-out forwards;
 }
 
 .container {
@@ -46,6 +59,7 @@ a:active {
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
 }
+
 .loginlink{
   color: ghostwhite;
   position: relative;
@@ -57,27 +71,13 @@ a:active {
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
 }
+
 .menubox{
   top: 20px;
   margin-right: 10px;
   width: 50px;
 }
 
-#plus {
-    position: fixed;
-    top: 100%;
-    left:100%;
-    transform: translate(-99%, -99%); 
-    animation: fade 4s ease-in-out forwards;
-}
-
-#plus:hover img{
-  transform-origin: center;
-  animation: scale_out_plus 2000ms ease-in-out forwards;
-}
-
-
-/* glitch code*/
 .glitch {
   display: grid;
   grid-template-columns: 1fr;
@@ -142,9 +142,8 @@ a:active {
         rgba(152,68,183,1) 51%, 
         rgba(255,53,127,1) 100%
   );  
-  animation: AnimateBG 20s ease infinite;
+  animation: AnimateBackgroundGradient 20s ease infinite;
 }
-
 
 @keyframes glitch {
   0% {
@@ -177,7 +176,7 @@ a:active {
   }
 }
 
-@keyframes fade{
+@keyframes Fade{
   from{
     opacity: 0;
   }
@@ -186,7 +185,7 @@ a:active {
   }
 }
 
-@keyframes scale_out_plus{
+@keyframes ScaleOutPlus{
   from{
     transform: scale(1);
   }
@@ -195,7 +194,7 @@ a:active {
   }
 }
 
-@keyframes AnimateBG { 
+@keyframes AnimateBackgroundGradient { 
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}

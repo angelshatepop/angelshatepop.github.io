@@ -1,18 +1,22 @@
+const secret = window.sessionStorage.getItem('secret')
+const homelink = document.getElementById("homelink")
+const loginlink = document.getElementById("loginlink")
+const body = document.getElementById("body")
+
+
 function setThemeTime(){
-    var date = new Date();
-    var hour = date.getHours();
+    let date = new Date();
+    let hour = date.getHours();
     if(hour < 17 && hour >= 5){
-      document.body.style.backgroundColor= "ghostwhite";
+      body.style.backgroundColor= "ghostwhite";
       document.body.style.color="black";
-      document.getElementById("loginlink").style.color = "black";
-      document.getElementById("home").style.color = "black";
+      loginlink.style.color = "black";
+      homelink.style.color = "black";
     }
     if (secret == 1){
-      document.getElementById("body").className = "gradientbg";
-      document.getElementById("home").style.color = "black";
-      document.getElementById("loginlink").style.color = "black";
+      body.className = "gradientbg";
+      homelink.style.color = "black";
+      loginlink.style.color = "black";
       window.sessionStorage.setItem('secret', 0);
     }
   }
-
-var secret = window.sessionStorage.getItem('secret');

@@ -1,47 +1,42 @@
-var input = document.getElementById("key");
-var keyresult = document.getElementById("keyresult");
+const input = document.getElementById("inputkey")
+const keyresult = document.getElementById("keyresult")
+const welcomeText = document.getElementById("welcome")
+const body = document.getElementById("body")
+const loginKey = "key"
+const secretKeyGradient = "soup"
 
 input.addEventListener("keypress", function(event) {
 if (event.key === "Enter") {
-  var key = document.getElementById('key').value;
-  var key2 = 'key';
-  var secretkeygradient = 'soup';
-  if (key == key2){
+  let inputvalue = input.value;
+  if (inputvalue == loginKey) {
     window.location="./home.html";
     keyresult.innerHTML = "";
     input.value = "";
   }
-  else if(key == secretkeygradient){
-    if (document.getElementById("body").className == "gradientbg"){
+  else if(inputvalue == secretKeyGradient){
+    if (body.className == "gradientbg") {
       keyresult.innerHTML = "";
+      input.value = "";
     }
-    else{
-      document.getElementById("body").className = "gradientbg";
-      document.getElementById("welcome").style.color = "black";
+    else {
+      body.className = "gradientbg";
+      welcomeText.style.color = "black";
+      input.style.color = "black";
+      input.style.borderColor = "black";
+      input.style.backgroundColor = "#B0E0E6";
       keyresult.innerHTML = "secret: 'soup' toggled";
       keyresult.style.color = "ghostwhite";
-      input.value = "";
       window.sessionStorage.setItem('secret', 1);
     }
   }
-  else{
+  else {
     keyresult.innerHTML = "incorrect keyphrase";
+    input.value = "";
     keyresult.style.color = "#cf1020";
   }
   event.preventDefault();
 }
 });
-
-function setThemeTime(){
-  var date = new Date();
-  var hour = date.getHours();
-  if(hour < 17 && hour >= 5){
-    document.body.style.backgroundColor= "ghostwhite";
-    document.body.style.color="black";
-    input.style.color = "black";
-    input.style.borderColor = "black";
-  }
-}
 
 input.addEventListener("input", () => {
   if(input.value.length === 0)
@@ -49,3 +44,14 @@ input.addEventListener("input", () => {
     keyresult.innerHTML = "";
   }
 })
+
+function setThemeTime() {
+  let date = new Date();
+  let hour = date.getHours();
+  if(hour < 17 && hour >= 5) {
+    body.style.backgroundColor= "ghostwhite";
+    body.style.color="black";
+    input.style.color = "black";
+    input.style.borderColor = "black";
+  }
+}

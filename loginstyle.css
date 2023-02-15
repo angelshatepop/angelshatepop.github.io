@@ -5,12 +5,7 @@ body {
     color: ghostwhite;
 }
 
-.container {
-    place-items: center;
-    text-align: center;
-}
-
-input[type=text]{
+input[type=text] {
     position: absolute;
     color: ghostwhite;
     text-align: center;
@@ -24,10 +19,10 @@ input[type=text]{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    animation: keyphrase_fade 8s ease-in;
+    animation: KeyphraseFade 8s ease-in;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
@@ -36,7 +31,7 @@ input:focus{
     top: 40%;
     left:50%;
     transform: translate(-50%, -50%); 
-    animation: fade 6s ease-in;
+    animation: Fade 6s ease-in;
 }
 
 #brighten {
@@ -46,11 +41,16 @@ input:focus{
     transform: translate(-50%, -50%); 
     font-weight: bold;
     font-style: italic;
-    animation: bright 6s ease-in;
+    animation: Bright 6s ease-in;
     pointer-events: none;
- }
+}
 
-.keyresult{
+.container {
+    place-items: center;
+    text-align: center;
+}
+
+.keyresult {
     position: absolute;
     top: 55%;
     left:50%;
@@ -58,7 +58,7 @@ input:focus{
     font-size: 9px;
     font-style: italic;
     pointer-events: none;
-    animation: keyphrase_fade 8s ease-in;
+    animation: KeyphraseFade 8s ease-in;
 }
 
 .gradientbg {
@@ -77,10 +77,10 @@ input:focus{
         rgba(152,68,183,1) 51%, 
         rgba(255,53,127,1) 100%
   );  
-  animation: AnimateBG 20s ease infinite;
+  animation: AnimateBackgroundGradient 20s ease infinite;
 }
 
-@keyframes fade{
+@keyframes Fade {
     0%{
         opacity: 0;
         top: 50%;
@@ -90,11 +90,12 @@ input:focus{
         top: 50%;
     }
     100%{
+        opacity: 1;
         top: 40%;
     }
 }  
 
-@keyframes bright{
+@keyframes Bright {
     0%{
         opacity: 0;
         top: 60%;
@@ -115,7 +116,7 @@ input:focus{
     }
 }
 
-@keyframes keyphrase_fade{
+@keyframes KeyphraseFade {
     0%{
         opacity: 0;
         pointer-events: none;
@@ -129,7 +130,7 @@ input:focus{
     }
 }
 
-@keyframes AnimateBG { 
+@keyframes AnimateBackgroundGradient { 
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
