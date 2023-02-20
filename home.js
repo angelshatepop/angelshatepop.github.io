@@ -3,7 +3,6 @@ const homelink = document.getElementById("homelink")
 const loginlink = document.getElementById("loginlink")
 const body = document.getElementById("body")
 
-
 function setThemeTime(){
     let date = new Date();
     let hour = date.getHours();

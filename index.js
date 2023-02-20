@@ -3,7 +3,7 @@ const keyresult = document.getElementById("keyresult")
 const welcomeText = document.getElementById("welcome")
 const body = document.getElementById("body")
 const loginKey = "key"
-const secretKeyGradient = "soup"
+const secretKeyGradient = "angelplus"
 
 input.addEventListener("keypress", function(event) {
 if (event.key === "Enter") {
@@ -48,7 +48,7 @@ input.addEventListener("input", () => {
 function setThemeTime() {
   let date = new Date();
   let hour = date.getHours();
-  if(hour < 17 && hour >= 5) {
+  if(hour < 18 && hour >= 5) {
     body.style.backgroundColor= "ghostwhite";
     body.style.color="black";
     input.style.color = "black";
